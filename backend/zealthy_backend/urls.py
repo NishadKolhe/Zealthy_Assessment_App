@@ -17,5 +17,6 @@ router.register(r'medications', MedicationViewSet, basename='medication')
 
 urlpatterns = [
     path('django-admin/', admin.site.urls),
+    path('api/patients/', include('patients.urls')),
     path('api/', include(router.urls)),
 ]
