@@ -10,7 +10,6 @@ const api = axios.create({
   },
 });
 
-// Attach access token if present
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("access");
@@ -28,9 +27,6 @@ api.interceptors.response.use(
   (error) => {
     if (error.response?.status === 401) {
       console.warn("Unauthorized request");
-      // OPTIONAL later:
-      // localStorage.clear();
-      // navigate("/login");
     }
     return Promise.reject(error);
   },

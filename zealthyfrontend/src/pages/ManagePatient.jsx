@@ -311,8 +311,8 @@ export default function ManagePatient() {
   return (
     <>
       <Topbar
-        title="MiniEMR Admin"
-        navLabel="<- Back"
+        title="Zealthy MiniEMR Admin"
+        navLabel="< Back"
         navPath="/admin"
         onLogout={() => {
           localStorage.removeItem("admin");
@@ -489,7 +489,12 @@ export default function ManagePatient() {
                     <div style={{ display: "flex", gap: "8px" }}>
                       <button
                         className="topbar-logout-btn"
-                        onClick={() => setEditingPrescription(row)}
+                        onClick={() => {
+                          const originalPrescription = prescriptions.find(
+                            (p) => p.id === row.id,
+                          );
+                          setEditingPrescription(originalPrescription);
+                        }}
                       >
                         Edit
                       </button>
@@ -532,58 +537,11 @@ export default function ManagePatient() {
         )}
 
         {editingPrescription && (
-          <AddDialogueBox
+          <AddPrescriptionDialogueBox
             title="Edit Prescription"
-            fields={[
-              {
-                label: "Medication",
-                name: "medication",
-                type: "select",
-                options: medications.map((m) => ({
-                  value: m.id,
-                  label: m.name,
-                })),
-                required: true,
-              },
-              {
-                label: "Dosage",
-                name: "dosage",
-                type: "select",
-                options: [
-                  "1mg",
-                  "2mg",
-                  "5mg",
-                  "10mg",
-                  "25mg",
-                  "50mg",
-                  "100mg",
-                  "250mg",
-                  "500mg",
-                  "1000mg",
-                ],
-                required: true,
-              },
-              {
-                label: "Quantity",
-                name: "quantity",
-                type: "number",
-                required: true,
-              },
-              {
-                label: "Refill Date",
-                name: "refill_date",
-                type: "date",
-                required: true,
-              },
-              {
-                label: "Schedule",
-                name: "refill_schedule",
-                type: "select",
-                options: ["MONTHLY"],
-              },
-            ]}
+            medications={medications} // same prop as Add
             initialValues={{
-              medication: editingPrescription.medication,
+              medication: editingPrescription.medication?.id,
               dosage: editingPrescription.dosage,
               quantity: editingPrescription.quantity,
               refill_date: editingPrescription.refill_date,

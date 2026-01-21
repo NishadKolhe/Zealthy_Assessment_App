@@ -49,7 +49,7 @@ export default function AdminDashboard() {
   return (
     <>
       <Topbar
-        title="MiniEMR Admin"
+        title="Zealthy MiniEMR Admin"
         navLabel="Patients"
         navPath="/admin"
         onLogout={handleLogout}

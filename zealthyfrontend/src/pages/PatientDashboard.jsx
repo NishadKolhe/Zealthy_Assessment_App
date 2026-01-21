@@ -83,7 +83,7 @@ export default function PatientDashboard() {
   return (
     <>
       <Topbar
-        title="MiniEMR"
+        title="Zealthy MiniEMR"
         navLabel="Dashboard"
         navPath="/patient/dashboard"
         onLogout={handleLogout}

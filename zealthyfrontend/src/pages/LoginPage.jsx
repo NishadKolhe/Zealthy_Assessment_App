@@ -40,8 +40,8 @@ export default function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-wrapper">
-        <h1 className="login-title">MiniEMR</h1>
-        <p className="login-subtitle">Patient Portal</p>
+        <h1 className="login-title">Zealthy MiniEMR</h1>
+        <p className="login-subtitle">Patient Portal by Nishad Kolhe</p>
 
         <div className="login-card">
           <h2 className="login-card-title">Sign In</h2>
