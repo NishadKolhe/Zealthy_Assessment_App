@@ -1,0 +1,14 @@
+.topbar-logout-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.topbar-logout-btn:hover {
+  background-color: #c82333;
+}

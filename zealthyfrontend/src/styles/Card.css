@@ -1,0 +1,33 @@
+.patient-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px 32px;
+  width: 100%;
+  max-width: 800px;
+  justify-content: left;
+}
+
+.patient-card-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.patient-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.patient-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+}
+
+.patient-email {
+  font-size: 14px;
+  color: #555;
+}

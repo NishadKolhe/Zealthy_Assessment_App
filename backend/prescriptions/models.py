@@ -12,7 +12,7 @@ class Prescription(models.Model):
     class RefillSchedule(models.TextChoices):
         MONTHLY = "MONTHLY", "Monthly"
 
-    # NOTE: Dosages come from seed data — stored as controlled strings
+  
     DOSAGE_CHOICES = [
         ("1mg", "1mg"),
         ("2mg", "2mg"),
