@@ -1,0 +1,41 @@
+Zealthy MiniEMR – Full Stack Healthcare Management System by Nishad Kolhe
+
+With Zealthy MiniEMR I have created a lightweight Electronic Medical Record (EMR) system designed for healthcare providers to manage patients, appointments, and prescriptions efficiently. 
+This project demonstrates a complete full-stack implementation with Django REST API backend and a React frontend.
+
+Features I have added - 
+ 
+  Patient Management: Add, view, and edit patient details including name, email, and credentials.
+
+  Appointment Scheduling via Admin: Schedule one-time or recurring appointments for patients. Supports weekly and monthly recurrence patterns.
+
+  Prescription Management: Add, edit, and track prescriptions with dosage, quantity, refill dates, and schedules.
+
+  Admin Interface: Secure admin dashboard to manage patients, appointments, and prescriptions in a single view.
+
+  API-first Architecture: Fully RESTful API for all backend operations, easily extendable for mobile apps or other clients.
+
+
+
+Tech Stack I used - 
+
+  Backend: Django 4.2, Django REST Framework
+
+  Frontend: React, React Router, Axios for API calls
+
+  Database: SQLite (for development) / PostgreSQL (for production-ready deployment)
+
+  Deployment:
+
+      Backend: PythonAnywhere
+
+      Frontend: Netlify
+
+Documentation - 
+  I have added my SDLC process documents within the repo
+
+Live Demo - 
+
+  Backend API: https://zealthyemrapp.pythonanywhere.com/api/
+
+  Frontend Dashboard: https://zealthyemrappnishad.netlify.app/
